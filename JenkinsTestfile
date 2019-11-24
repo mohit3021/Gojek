@@ -1,0 +1,29 @@
+#!groovy
+
+def isRunSucceed = true
+
+node{
+   
+    stage("Checkout") {
+		checkout scm
+    }
+	
+	stage("Run UI") {
+		if (isRunSucceed){
+		    try {
+		        sh "/data2/maven/bin/mvn clean test"
+		    } catch(e) {
+		        isRunSucceed = false
+		        
+		    }
+		}
+	}
+	
+	stage("Generate Report") {
+	    if (isRunSucceed){
+		    cucumber fileIncludePattern: '**/*.json', jsonReportDirectory: 'target/cucumber/'
+		}
+	}
+	
+}
+
