@@ -67,10 +67,6 @@ boolean bolTestStatus=false;
 						+ "</b><p></p>" + file1key+" = " +file1value +";<p></p><b>API from File 2: "
 						+ arFile1Api2.get(i) + "</b><p></p>" + file2key+" = "+file2value);
 				
-				if (file1value.equalsIgnoreCase(file2value)) 
-				{
-					
-				}
 
 				softAssert.assertThat(file1value).isEqualToIgnoringCase(file2value);
 
