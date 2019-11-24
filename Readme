@@ -1,1 +1,35 @@
-Step 1-
+Step 1- 
+Take Gojek Project from the repository.[https://github.com/mohit3021/Gojek.git]
+Open your ecplise
+select file and import
+import as a maven project
+wait until maven download dependency
+click on project update the project.
+There should be no error in the project.
+
+Step 2: How to run the project.
+Way1:- from test runner class.
+goto \src\test\java\co\id\runner
+open runner class and run as junit[applicable for both runner]
+
+Way2:- From POM.xml
+open pom.xml >> right click>> run configuration >> maven Build >> Gojek >> run
+it will run both of the runner class.
+
+Way 3:- From command
+goto the project location 
+open the cmd
+write mvm clean install
+
+
+Way 4:- From Fearture file
+open cuucmber feature file
+run as feature file.
+
+Step 3: result Verification
+goto the target folder >> test1/test2>>cucumber-parallel>>cucumber.html>>index.html
+open index.html into web browser.
+
+Enjoy..
+
+
